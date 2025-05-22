@@ -11,4 +11,4 @@ phases:
     commands:
       - echo Building....
       - echo $DB_USERNAME
-      - aws cloudwatch tag-resource --resource-arn arn:aws:cloudwatch:us-east-1:588738568907:alarm:alarm_${DB_USERNAME} --tags Key = Test,Value=test
+      - aws cloudwatch tag-resource --resource-arn arn:aws:cloudwatch:us-east-1:588738568907:alarm:alarm_${DB_USERNAME} --tags Key=Test,Value=test
