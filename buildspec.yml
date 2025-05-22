@@ -1,0 +1,14 @@
+version: 0.2
+
+env:
+  parameter-store:
+    DB_USERNAME: "/myapp/docker-credentials/username"
+
+
+
+phases:
+  build:
+    commands:
+      - echo Building....
+      - echo $DB_USERNAME
+      - aws cloudwatch tag-resource aws:cloudwatch:us-east-1:588738568907:alarm:alarm_${DB_USERNAME} --tags Key = Test,Value=test
